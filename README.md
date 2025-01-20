@@ -35,7 +35,7 @@ The Vaccine Adverse Event Reporting System (VAERS)* is a national early warning 
 * The user guide to understand more about the data can be found in [VAERS data use guide](https://vaers.hhs.gov/docs/VAERSDataUseGuide_en_September2021.pdf).
 * The data provided can be explored at [The LEAF VAERS Data Analysis System](http://vaers.leafnlp.org/data/vax_event_search_basic).
 
-For each year there are three tables in the ***VAERS dataset***, including ***VAERS_DATA***, ***VAERS_Symptoms***, and ***VAERS_Vaccine***. <br>
+For each year there are three tables in the ***VAERS dataset***, including ***VAERS_DATA***, ***VAERS_Symptoms***, and ***VAERS_Vaccine***. <br><br>
 For the Hepatitis B vaccine, data has been available from 1990 to now. This comprise  of ***106 tables***.<br><br>
 To obtain the common columns in all three file types for each year, I have implemented an inner join using the column VAERS_ID containing VAERS identification numbers that are
 common in all file types. The resultant file obtained for every year was joined to obtain the final file.<br><br>
