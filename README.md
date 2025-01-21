@@ -64,8 +64,8 @@ We notice that there is a significant reduction in the number of tokens in proce
 <div align="center">
 <img width="700" alt="image" src="https://github.com/user-attachments/assets/0698e5cb-fe14-446c-9606-85109d33d26b" />
 </div>
-## Statistical Analysis of VAERS data for Hepatitis B Vaccine
 
+## Statistical Analysis of VAERS data for Hepatitis B Vaccine
 ### Types of Hepatitis B Vaccines administered based on age
 #### Histogram:
 <div align="center">
@@ -76,6 +76,10 @@ We notice that there is a significant reduction in the number of tokens in proce
 <div align="center">
 <img width="700" alt="image" src="https://github.com/user-attachments/assets/ea09b492-1a1a-45f0-b842-1c88219d9bf3" />
 </div>
+
+#### Insights:
+* Engerix – B was the most administered Hepatitis B vaccine 
+* It was administered mostly between the age groups of 0-9
 
 
 ### Types of Hepatitis B Vaccines administered based on Gender:
@@ -89,8 +93,10 @@ We notice that there is a significant reduction in the number of tokens in proce
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/299c2f86-f042-4f0d-ae55-3c5d998611fd" />
 </div>
 
- **F - Female || M - Male || U - Unknown**
+ **F - Female     M - Male       U - Unknown**
 
-
+#### Insights:
+* Engerix – B was the most administered Hepatitis B vaccine.
+* It was administered mostly to females.
 
 
