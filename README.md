@@ -9,7 +9,7 @@ Analyzing adverse events in the vaccine is essential for ensuring vaccine safety
 Hepatitis B is a liver infection caused by the hepatitis B virus (HBV). It can range from a mild, short-term illness to a chronic, long-term condition. The virus primarily spreads through contact with infected body fluids, which may occur through blood transfusions, sharing needles, sexual contact, or from mother to child during childbirth.
 
 #### Temporal Relationships
-This involves studying when adverse events occur concerning when a vaccine was administered. By analyzing the timing, researchers can assess whether certain adverse events are more likely to happen immediately after vaccination, within a few days, weeks, or over a longer period. Understanding this timing helps determine if there’s a potential link between the vaccine and the event or if it’s coincidental.
+This involves studying when adverse events occur concerning when a vaccine was administered. By analyzing the timing, researchers can assess whether certain adverse events are more likely to happen immediately after vaccination, within a few days, weeks, or longer. Understanding this timing helps determine if there’s a potential link between the vaccine and the event or if it’s coincidental.
 
 #### Associative Relationships:
 This part examines possible correlations or associations between the vaccine and specific adverse events. By identifying patterns in data, researchers can see if certain side effects appear more frequently with specific vaccines, age groups, health conditions, or demographic factors.
@@ -29,7 +29,7 @@ The following are the main aspects of this project:
 
 ## **Data Procurement and Preprocessing**
 ### Data source:
-The Vaccine Adverse Event Reporting System (VAERS)* is a national early warning system to detect possible safety problems in U.S.-licensed vaccines. VAERS is co-managed by the _Centers for Disease Control and Prevention (CDC)_ and the _U.S. Food and Drug Administration (FDA)_. VAERS accepts and analyzes reports of adverse events (possible side effects) after a person has received a vaccination.
+The Vaccine Adverse Event Reporting System (VAERS)* is a national early warning system that detects possible safety problems in U.S.-licensed vaccines. VAERS is co-managed by the _Centers for Disease Control and Prevention (CDC)_ and the _U.S. Food and Drug Administration (FDA)_. VAERS accepts and analyzes reports of adverse events (possible side effects) after a person has received a vaccination.
 <br>
 * The data can be downloaded at [VAERS data source link](https://vaers.hhs.gov/data/datasets.html).
 * The user guide to understand more about the data can be found in [VAERS data use guide](https://vaers.hhs.gov/docs/VAERSDataUseGuide_en_September2021.pdf).
@@ -39,4 +39,29 @@ For each year there are three tables in the ***VAERS dataset***, including ***VA
 For the Hepatitis B vaccine, data has been available from 1990 to now. This comprise  of ***106 tables***.<br><br>
 To obtain the common columns in all three file types for each year, I have implemented an inner join using the column VAERS_ID containing VAERS identification numbers that are
 common in all file types. The resultant file obtained for every year was joined to obtain the final file.<br><br>
-The final file comprised ***73,793*** samples relevant to the Hepatitis B Vaccine, and these samples were used to implement this project.<br><br>
+The final file comprised ***73,793*** samples relevant to the Hepatitis B Vaccine, which were used to implement this project.<br><br>
+
+## Data Preprocessing:
+A function was written in Python to perform the following preprocessing steps on the crude description of patients who received vaccination:
+* **Handled the missing values**
+* **Converted text to lowercase**
+* **Removed Characters**
+* **Removed punctuation**
+* **Performed Text Tokenization**
+* **Removed Stop Words**
+
+<img width="578" alt="image" src="https://github.com/user-attachments/assets/958593de-4a62-4bdc-a5c2-416bd8e19f32" />
+
+### Token summary in the processed texts:
+#### Five-Point Summary comparison of token count:
+<img width="596" alt="image" src="https://github.com/user-attachments/assets/d302b00b-cfe7-455c-8872-33e3dc1495c3" />
+<br>
+We notice that there is a significant reduction in the number of tokens in processed text. Also, there is a significant difference between the 3rd quartile 75th percentile, and 100th percentile, indicating the presence of a large number of outliers. The nonrelevant outliers were removed.<br>
+
+#### The boxplot of the token count after preprocessing:
+<img width="485" alt="image" src="https://github.com/user-attachments/assets/0698e5cb-fe14-446c-9606-85109d33d26b" />
+
+
+
+
+
