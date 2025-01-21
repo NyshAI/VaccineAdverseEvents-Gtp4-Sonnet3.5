@@ -88,7 +88,7 @@ We notice that there is a significant reduction in the number of tokens in proce
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/29dde3fe-3984-4431-907f-ec9cac12f838" />
 </div>
 
-#### Five-Point Summary:
+#### Count:
 <div align="center">
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/299c2f86-f042-4f0d-ae55-3c5d998611fd" />
 </div>
@@ -99,4 +99,30 @@ We notice that there is a significant reduction in the number of tokens in proce
 * Engerix – B was the most administered Hepatitis B vaccine.
 * It was administered mostly to females.
 
+### Death count analysis of deaths that occurred due to Hepatitis-B vaccination.
+#### Histogram:
+<div align = "center">
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/5b1b563f-d584-4490-b6a4-e3957046651c" />
+</div>
+
+#### Count:
+<div align = "center">
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/69bd8298-2671-4b7a-8f57-0611b6f1a1a4" />
+</div>
+
+#### Insight:
+We notice that the ***Recombivax-HB*** vaccine has caused more deaths even though it was the second most administered vaccine. 
+So, in comparison, the ***Engerix-B*** vaccine has performed better.
+
+
+### Frequency of life-threatening events caused after Hepatitis B Vaccine Administration:
+#### Histogram:
+<div align = "center">
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/155d6597-ce51-4e1d-b148-c71f2ba0f610" />
+</div>
+
+#### Count:
+<div align = "center">
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/69bd8298-2671-4b7a-8f57-0611b6f1a1a4" />
+</div>
 
