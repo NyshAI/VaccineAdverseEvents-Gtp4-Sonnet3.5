@@ -78,5 +78,19 @@ We notice that there is a significant reduction in the number of tokens in proce
 </div>
 
 
+### Types of Hepatitis B Vaccines administered based on Gender:
+#### Histogram:
+<div align = "center">
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/29dde3fe-3984-4431-907f-ec9cac12f838" />
+</div>
+
+#### Five-Point Summary:
+<div align="center">
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/299c2f86-f042-4f0d-ae55-3c5d998611fd" />
+</div>
+
+ **F - Female || M - Male || U - Unknown**
+
+
 
 
