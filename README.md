@@ -49,27 +49,33 @@ A function was written in Python to perform the following preprocessing steps on
 * **Removed punctuation**
 * **Performed Text Tokenization**
 * **Removed Stop Words**
-
+<div align="center">
 <img width="578" alt="image" src="https://github.com/user-attachments/assets/958593de-4a62-4bdc-a5c2-416bd8e19f32" />
-
+</div>
 ### Token summary in the processed texts:
 #### Five-Point Summary comparison of token count:
+<div align="center">
 <img width="596" alt="image" src="https://github.com/user-attachments/assets/d302b00b-cfe7-455c-8872-33e3dc1495c3" />
+</div>
 <br>
 We notice that there is a significant reduction in the number of tokens in processed text. Also, there is a significant difference between the 3rd quartile 75th percentile, and 100th percentile, indicating the presence of a large number of outliers. The nonrelevant outliers were removed.<br>
 
 #### The boxplot of the token count after preprocessing:
+<div align="center">
 <img width="700" alt="image" src="https://github.com/user-attachments/assets/0698e5cb-fe14-446c-9606-85109d33d26b" />
-
+</div>
 ## Statistical Analysis of VAERS data for Hepatitis B Vaccine
 
 ### Types of Hepatitis B Vaccines administered based on age
 #### Histogram:
+<div align="center">
 <img width="1000" alt="image" src="https://github.com/user-attachments/assets/95bbd3f8-ca4a-4383-9190-c921baf30773" />
+</div>
 
 #### Five-Point Summary:
-<img width="578" alt="image" src="https://github.com/user-attachments/assets/ea09b492-1a1a-45f0-b842-1c88219d9bf3" />
-
+<div align="center">
+<img width="700" alt="image" src="https://github.com/user-attachments/assets/ea09b492-1a1a-45f0-b842-1c88219d9bf3" />
+</div>
 
 
 
