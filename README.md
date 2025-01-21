@@ -59,7 +59,16 @@ A function was written in Python to perform the following preprocessing steps on
 We notice that there is a significant reduction in the number of tokens in processed text. Also, there is a significant difference between the 3rd quartile 75th percentile, and 100th percentile, indicating the presence of a large number of outliers. The nonrelevant outliers were removed.<br>
 
 #### The boxplot of the token count after preprocessing:
-<img width="485" alt="image" src="https://github.com/user-attachments/assets/0698e5cb-fe14-446c-9606-85109d33d26b" />
+<img width="700" alt="image" src="https://github.com/user-attachments/assets/0698e5cb-fe14-446c-9606-85109d33d26b" />
+
+## Statistical Analysis of VAERS data for Hepatitis B Vaccine
+
+### Types of Hepatitis B Vaccines administered based on age
+#### Histogram:
+<img width="1000" alt="image" src="https://github.com/user-attachments/assets/95bbd3f8-ca4a-4383-9190-c921baf30773" />
+
+#### Five-Point Summary:
+<img width="578" alt="image" src="https://github.com/user-attachments/assets/ea09b492-1a1a-45f0-b842-1c88219d9bf3" />
 
 
 
