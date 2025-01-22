@@ -42,7 +42,7 @@ common in all file types. The resultant file obtained for every year was joined 
 The final file comprised ***73,793*** samples relevant to the Hepatitis B Vaccine, which were used to implement this project.<br><br>
 
 ## Data Preprocessing:
-A function was written in Python to perform the following preprocessing steps on the crude description of patients who received vaccination:
+A function was written in Python to perform the following preprocessing steps on the crude description present in the variable **SYMPTOM_TEXT** of patients who received vaccination:
 * **Handled the missing values**
 * **Converted text to lowercase**
 * **Removed Characters**
@@ -125,4 +125,8 @@ So, in comparison, the ***Engerix-B*** vaccine has performed better.
 <div align = "center">
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/69bd8298-2671-4b7a-8f57-0611b6f1a1a4" />
 </div>
+
+#### Insight:
+We notice that although the ***Recombivax-HB*** vaccine has caused more deaths when compared to ***Engerix-B***, the ***Engerix-B*** causes more life-threatening diseases  in comparison.
+
 
