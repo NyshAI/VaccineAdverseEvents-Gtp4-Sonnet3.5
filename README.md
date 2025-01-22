@@ -52,6 +52,7 @@ A function was written in Python to perform the following preprocessing steps on
 <div align="center">
 <img width="578" alt="image" src="https://github.com/user-attachments/assets/958593de-4a62-4bdc-a5c2-416bd8e19f32" />
 </div>
+
 ### Token summary in the processed texts:
 #### Five-Point Summary comparison of token count:
 <div align="center">
@@ -85,15 +86,13 @@ We notice that there is a significant reduction in the number of tokens in proce
 ### Types of Hepatitis B Vaccines administered based on Gender:
 #### Histogram:
 <div align = "center">
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/29dde3fe-3984-4431-907f-ec9cac12f838" />
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/32ded4bc-8372-4728-a943-71cfb8983909" />
 </div>
 
 #### Count:
 <div align="center">
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/299c2f86-f042-4f0d-ae55-3c5d998611fd" />
 </div>
-
- **F - Female     M - Male       U - Unknown**
 
 #### Insights:
 * Engerix – B was the most administered Hepatitis B vaccine.
