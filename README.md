@@ -1,7 +1,7 @@
 # Analyzing Temporal and Associative Relationships of Vaccine Adverse Events for Hepatitis B vaccination
 
 ## Background and Goal:
-Analyzing adverse events in the vaccine is essential for ensuring vaccine safety. With large datasets like Vaccine Adverse Events Reporting Systems (VAERS) capturing a wide range of reported vaccine adverse events, it becomes important to examine the temporal patterns and associations between them. In this project, the primary objective is to identify and uncover critical temporal relationships and associations of these adverse events with advanced natural language processing techniques.
+Analyzing adverse events in the vaccine is essential for ensuring vaccine safety. With large datasets like Vaccine Adverse Events Reporting Systems (VAERS) capturing a wide range of reported vaccine adverse events, it becomes important to examine their temporal patterns and associations. In this project, the primary objective is to identify and uncover critical temporal relationships and associations of these adverse events with advanced natural language processing techniques.
 
 ### Essential Terminology:
 
@@ -126,6 +126,6 @@ So, in comparison, the ***Engerix-B*** vaccine has performed better.
 </div>
 
 #### Insight:
-We notice that although the ***Recombivax-HB*** vaccine has caused more deaths when compared to ***Engerix-B***, the ***Engerix-B*** causes more life-threatening diseases  in comparison.
+We notice that although the ***Recombivax-HB*** vaccine has caused more deaths when compared to ***Engerix-B***, the ***Engerix-B*** causes more life-threatening diseases.
 
 
