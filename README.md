@@ -128,4 +128,5 @@ So, in comparison, the ***Engerix-B*** vaccine has performed better.
 #### Insight:
 We notice that although the ***Recombivax-HB*** vaccine has caused more deaths when compared to ***Engerix-B***, the ***Engerix-B*** causes more life-threatening diseases.
 
+## Temporal Relationship Analysis of Symptoms:
 
