@@ -157,7 +157,10 @@ To do this we implement the following steps:<br>
        [].<br>
        I then go on to implement a try-and-catch block.<br>
        In the try block, I use the above-provided Token Limit Function to ensure that the number of tokens is below 3000, so that the costs are in check, in case the input 
-       text is long. <br>
+       text is long. <br> I then call the GPT4 API using the Call **ChatCompletion.create** as follows:<br>
+       <img width="1000" alt="image" src="https://github.com/user-attachments/assets/385e5c41-5c7b-4a19-a26b-ba0bf0102d59" />
+
+        
        
 
 
