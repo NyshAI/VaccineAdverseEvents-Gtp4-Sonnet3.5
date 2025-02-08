@@ -149,6 +149,16 @@ To do this we implement the following steps:<br>
    1. Load the OpenAI key to make GPT calls securely stored in the environment as follows:<br>
       <img width="319" alt="image" src="https://github.com/user-attachments/assets/7d769e20-5cf9-40b8-87fe-22e4f38c79f5" /><br>
       where **OPENAI_API_KEY** should contain the actual value of the key in the environment.
-   2.  Token Limit Function: Truncate input text to ensure it fits within GPT-4's token limit I have set it to a default of 3000, but it can be changed as per re
+   2.  **Token Limit Function**: Truncate input text to ensure it fits within GPT-4's token limit I have set it to a default of 3000.<br> 
+       **Note:** This limit should be set carefully, considering the cost per token and the requirements of the task at hand.<br>
+       <img width="700" alt="image" src="https://github.com/user-attachments/assets/360e4629-7afe-4536-8d1a-30a3fd76d90e" />
+   3.  Function to extract a sequential list of symptoms using GPT4:<br>
+      This function takes in one record of the SYMPTOM_TEXT variable as a parameter which is named 'text'. If the input provided is not text or is missing I return an empty 
+       [].<br>
+       I then go on to implement a try-and-catch block.<br>
+       In the try block, I use the above-provided Token Limit Function to ensure that the number of tokens is below 3000, so that the costs are in check, in case the input 
+       text is long. <br>
+       
+
 
     
