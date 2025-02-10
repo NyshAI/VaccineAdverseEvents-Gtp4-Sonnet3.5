@@ -162,15 +162,36 @@ To do this we implement the following steps:<br>
        I have designed the prompt as follows:<br>
        <img width="847" alt="image" src="https://github.com/user-attachments/assets/5780f5ab-f982-4cc7-8cae-6403a72c22b8" /><br>
        Explanation of parameter:<br>
-           * **model="gpt-4"** specifies that we are using the GPT-4 model.<br>
-           * **Messages Format**:<br>
-             &ensp; - **System Message**: Sets the assistant's behavior to focus on analyzing medical text and extracting symptoms.<br>
-             &ensp; - **User Message**: Sends the formatted prompt containing the input text.<br>
-             &ensp; - **max_tokens=500**: Limits the response length to 500 tokens.<br>
-             &ensp; - **temperature=0.2**: The **temperature** parameter will determine how controls the level of randomness and creativity in its responses:<br>
-                      &emsp;* **0.0–0.4**: Low temperature, producing conservative and predictable responses.<br>
-                      &emsp;* **0.5–0.7**: Medium temperature, producing a balance between creativity and accuracy.<br>
-                      &emsp;* **0.8–1.0**: High temperature, producing highly creative and unpredictable responses.<br>
+       - **`model="gpt-4"`**: Specifies that we are using the GPT-4 model.
+       - **Messages Format**:
+         - **System Message**: Sets the assistant's behavior to focus on analyzing medical text and extracting symptoms.
+         - **User Message**: Sends the formatted prompt containing the input text.
+         - **`max_tokens=500`**: Limits the response length to **500 tokens**.
+         - **temperature=0.2**: The **temperature** parameter will determine how controls the level of randomness and creativity in its responses:<br>
+                - **0.0–0.4**: Low temperature, producing conservative and predictable responses.<br>
+                - **0.5–0.7**: Medium temperature, producing a balance between creativity and accuracy.<br>
+                - **0.8–1.0**: High temperature, producing highly creative and unpredictable responses.<br>
+           Since I have wanted the responses to be more conservative I have set a lower value of temperature.<br>
+           
+  4. Then we parse the response to extract the symptom as follows:<br>
+     <img width="500" alt="image" src="https://github.com/user-attachments/assets/4b12f678-e565-4373-8b01-9a0c78136dc4" />
+
+  5. The **symptoms** extracted above is a string consisting of a list of symptoms of the format, *"[symptom_1,symptom_2,...,symptom_n]"*. This needs to be converted into a Python list comprising symptoms. This is implemented as follows:<br>
+     <img width="858" alt="image" src="https://github.com/user-attachments/assets/1b049283-8671-45f9-8c7d-8da765c36334" /><br>
+The above steps are implemented as the try block.
+6. As part of the expect block we make sure that if an expectation is raised while extracting symptoms, an empty list **[]** is returned, and the execution continues to extract the symptoms from the next textual record of "SYMPTOM_TEXT".
+
+### Symptom extraction using Antropic's Claude-Sonnet-3.5 model:
+The process of extracting symptoms from the crude textual description of SYMPTOMS_TEXT using Sonet3.5 is similar to the process we used with Sonnet 3.5 models.<br> The Anthropic API key is stored in the working environment as follows:<br>
+<img width="309" alt="image" src="https://github.com/user-attachments/assets/4014f7bb-d992-4b7d-80ae-fce35b945b8e" /><br>
+I have written a function called **extract_symptoms_claude** which takes the textual descriptions as input available in SYMPTOMS_TEXT and performs the following steps.
+1. If the input is not a text or empty an empty string [] is returned.
+2. Then we implement a try-catch block. In the try block,
+    - We use the truncate_text to make sure that the text is not too long.
+    - 
+
+
+        
                                                                                                                         
                                    
              
