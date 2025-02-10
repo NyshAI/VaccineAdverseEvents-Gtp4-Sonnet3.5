@@ -12,10 +12,10 @@ Hepatitis B is a liver infection caused by the hepatitis B virus (HBV). It can r
 This involves studying when adverse events occur concerning when a vaccine was administered. By analyzing the timing, researchers can assess whether certain adverse events are more likely to happen immediately after vaccination, within a few days, weeks, or longer. Understanding this timing helps determine if there’s a potential link between the vaccine and the event or if it’s coincidental.
 
 #### Associative Relationships:
-This part examines possible correlations or associations between the vaccine and specific adverse events. By identifying patterns in data, researchers can see if certain side effects appear more frequently with specific vaccines, age groups, health conditions, or demographic factors.
+This part examines possible correlations or associations between the vaccine and specific adverse events. By identifying patterns in data, researchers can see if certain side effects appear more frequently with particular vaccines, age groups, health conditions, or demographic factors.
 
 #### Vaccine Adverse Events: 
-These are any health issues or side effects reported after a person receives a vaccine, ranging from mild symptoms (like a sore arm) to more severe reactions.
+These are any health issues or side effects reported after receiving a vaccine, ranging from mild symptoms (like a sore arm) to more severe reactions.
 <br><br>
 In essence, the analysis aims to provide insights into when adverse events are likely to happen post-vaccination and whether these events are more common in specific contexts, ultimately helping in assessing Hepatitis B vaccine safety and improving patient outcomes.
 
@@ -151,7 +151,7 @@ To do this we implement the following steps:<br>
       where **OPENAI_API_KEY** should contain the actual value of the key in the environment.
    2.  **Token Limit Function**: Truncate input text to ensure it fits within GPT-4's token limit I have set it to a default of 3000.<br> 
        **Note:** This limit should be set carefully, considering the cost per token and the requirements of the task at hand.<br>
-       <img width="700" alt="image" src="https://github.com/user-attachments/assets/360e4629-7afe-4536-8d1a-30a3fd76d90e" />
+       <img width="500" alt="image" src="https://github.com/user-attachments/assets/360e4629-7afe-4536-8d1a-30a3fd76d90e" />
    3.  Function to extract a sequential list of symptoms using GPT4:<br>
       This function takes in one record of the SYMPTOM_TEXT variable as a parameter which is named 'text'. If the input provided is not text or is missing I return an empty 
        [].<br>
