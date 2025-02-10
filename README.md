@@ -158,7 +158,28 @@ To do this we implement the following steps:<br>
        I then go on to implement a try-and-catch block.<br>
        In the try block, I use the above-provided Token Limit Function to ensure that the number of tokens is below 3000, so that the costs are in check, in case the input 
        text is long. <br> I then call the GPT4 API using the Call **ChatCompletion.create** as follows:<br>
-       <img width="1000" alt="image" src="https://github.com/user-attachments/assets/385e5c41-5c7b-4a19-a26b-ba0bf0102d59" />
+       <img width="1000" alt="image" src="https://github.com/user-attachments/assets/385e5c41-5c7b-4a19-a26b-ba0bf0102d59" /><br>
+       I have designed the prompt as follows:<br>
+       <img width="847" alt="image" src="https://github.com/user-attachments/assets/5780f5ab-f982-4cc7-8cae-6403a72c22b8" /><br>
+       Explanation of parameter:<br>
+           * **model="gpt-4"** specifies that we are using the GPT-4 model.<br>
+           * **Messages Format**:<br>
+             &ensp; - **System Message**: Sets the assistant's behavior to focus on analyzing medical text and extracting symptoms.<br>
+             &ensp; - **User Message**: Sends the formatted prompt containing the input text.<br>
+             &ensp; - **max_tokens=500**: Limits the response length to 500 tokens.<br>
+             &ensp; - **temperature=0.2**: The **temperature** parameter will determine how controls the level of randomness and creativity in its responses:<br>
+                      &emsp;* **0.0–0.4**: Low temperature, producing conservative and predictable responses.<br>
+                      &emsp;* **0.5–0.7**: Medium temperature, producing a balance between creativity and accuracy.<br>
+                      &emsp;* **0.8–1.0**: High temperature, producing highly creative and unpredictable responses.<br>
+                                                                                                                        
+                                   
+             
+
+
+       
+       
+
+       
 
         
        
