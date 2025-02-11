@@ -222,7 +222,16 @@ Both LLMs might extract the same symptom in different ways, so there can be mult
     To group similar representations of the same symptom we use a technique called **approximate string matching** which is also popularly known as **fuzzy string matching**, which is used to find strings that match a pattern approximately (rather than exactly). <br>
 <div align = "center">
 <img width="1000" alt="image" src="https://github.com/user-attachments/assets/592b2ef5-0027-40d0-b85e-97def4782bbb" />
-</div>   
+</div> 
+<div align = "center">
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/7846d181-67d3-445f-90e0-8ff774b1a05f" />
+</div> 
+A function named group_similar_symptoms is defined as follows, to group similar representations of the same symptoms by implementing fuzzy string matching with a similarity threshold of 90%.
+<div align = "center">
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/7077700a-358e-4eea-8d44-5624ca883375" />
+</div> 
+
+
 
 
 
