@@ -188,7 +188,12 @@ I have written a function called **extract_symptoms_claude** which takes the tex
 1. If the input is not a text or empty an empty string [] is returned.
 2. Then we implement a try-catch block. In the try block,
     - We use the truncate_text to make sure that the text is not too long.
-    - 
+    - We send the API request to  Claude Messages as follows:
+      <img width="535" alt="image" src="https://github.com/user-attachments/assets/0850b612-79f4-44dc-980e-a2cbccdfd129" />
+    - The parameter *'content'* is provided with a prompt which is designed as follows:
+      <img width="880" alt="image" src="https://github.com/user-attachments/assets/3788c64f-c126-4305-a328-1ddac627268c" />
+
+
 
 
         
