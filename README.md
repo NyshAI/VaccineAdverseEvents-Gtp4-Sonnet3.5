@@ -180,24 +180,31 @@ To do this we implement the following steps:<br>
      <img width="858" alt="image" src="https://github.com/user-attachments/assets/1b049283-8671-45f9-8c7d-8da765c36334" /><br>
 The above steps are implemented as the try block.
 6. As part of the expect block we make sure that if an expectation is raised while extracting symptoms, an empty list **[]** is returned, and the execution continues to extract the symptoms from the next textual record of "SYMPTOM_TEXT".
-7. We apply the above "extract_symptoms_gpt4" to each textual record of "SYMPTOM_TEXT" and store the extracted list of symptoms in a variable called "extract_symptoms_gpt4".
+7. We apply the above "extract_symptoms_gpt4" to each textual record of "SYMPTOM_TEXT" and store the extracted list of symptoms in a variable called "extract_symptoms_gpt4".<br>
+<img width="1000" alt="image" src="https://github.com/user-attachments/assets/d6e967da-cb41-4930-9772-d1b94050e44c" />
+
+   
 ### Symptom extraction using Antropic's Claude-Sonnet-3.5 model:
 The process of extracting symptoms from the crude textual description of SYMPTOMS_TEXT using Sonet3.5 is similar to the process we used with Sonnet 3.5 models.<br> The Anthropic API key is stored in the working environment as follows:<br>
-<img width="309" alt="image" src="https://github.com/user-attachments/assets/4014f7bb-d992-4b7d-80ae-fce35b945b8e" /><br>
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/4014f7bb-d992-4b7d-80ae-fce35b945b8e" /><br>
 I have written a function called **extract_symptoms_claude** which takes the textual descriptions as input available in SYMPTOMS_TEXT and performs the following steps.
 1. If the input is not a text or empty an empty string [] is returned.
 2. Then we implement a try-catch block. In the try block,
     - We use the truncate_text to make sure that the text is not too long.
     - We send the API request to  Claude Messages as follows:
-      <img width="535" alt="image" src="https://github.com/user-attachments/assets/0850b612-79f4-44dc-980e-a2cbccdfd129" />
+      <img width="600" alt="image" src="https://github.com/user-attachments/assets/0850b612-79f4-44dc-980e-a2cbccdfd129" />
     - The parameter *'content'* is provided with a prompt which is designed as follows:
-      <img width="880" alt="image" src="https://github.com/user-attachments/assets/3788c64f-c126-4305-a328-1ddac627268c" />
+      <img width="1000" alt="image" src="https://github.com/user-attachments/assets/3788c64f-c126-4305-a328-1ddac627268c" />
 3. The raw response provided by the Claude Sonnet 3.5 LLM is of the form:<br>
    <img width="919" alt="image" src="https://github.com/user-attachments/assets/537f92c7-fcee-46da-9652-96158ef4a892" />
 4. The list of symptoms is extracted as follows:<br>
-   <img width="524" alt="image" src="https://github.com/user-attachments/assets/9dc99807-c20c-44f8-9745-e706060fa3d2" /><br>
-   <img width="434" alt="image" src="https://github.com/user-attachments/assets/a784b0f7-5384-49fb-94ed-1e4de3f5894b" /><br>
+   <img width="600" alt="image" src="https://github.com/user-attachments/assets/acbbbcbb-9616-4786-b4f5-45d82a22fdc9" /><br>
+   <img width="800" alt="image" src="https://github.com/user-attachments/assets/b2d6522c-d330-4b4e-bcf8-ff870909499a" /><br>
+   The function returns the above-extracted list of symptoms.
+5. The above-defined **extract_symptoms_claude** function is applied to each textual description record of **SYMPTOM_TEXT** as input and the lists of symptoms extracted are saved in the **Claude_SYMPTOMS** variable as follows:<br>
+<img width="1000" alt="image" src="https://github.com/user-attachments/assets/309e14fd-d970-47aa-bd15-6a22cbe9b506" />
 
+   
 
 
 
