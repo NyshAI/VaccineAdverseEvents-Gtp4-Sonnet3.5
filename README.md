@@ -231,10 +231,15 @@ A function named group_similar_symptoms is defined as follows, to group similar 
 <img width="800" alt="image" src="https://github.com/user-attachments/assets/7077700a-358e-4eea-8d44-5624ca883375" />
 </div> 
 <div align = "center">
-<img width="800" alt="image" src="https://github.com/user-attachments/assets/ffae0910-018a-4da0-96c1-947e5f077d07" />
-</div> 
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/23c2ab7e-34ed-44f8-9bed-2cec51d06ee8" />
+</div> <br>
 
-
+**Creating a common dictionary from grouped_symptoms_gpt4 and grouped_symptoms_Claude3**
+<div align = "center">
+<img width="1004" alt="image" src="https://github.com/user-attachments/assets/f99dc5d4-367b-4362-bff3-6911b79d4948" />
+<img width="1004" alt="image" src="https://github.com/user-attachments/assets/22b74ea9-89b4-4f8a-8f0a-e85cf773bd4b" />
+</div><br>
+This dictionary is manually modified to ensure that various representations of a symptom are correctly mapped to a unified key, accurately representing the symptom and maintaining consistency across different variations.
 
 
 
