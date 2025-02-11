@@ -204,7 +204,20 @@ I have written a function called **extract_symptoms_claude** which takes the tex
 5. The above-defined **extract_symptoms_claude** function is applied to each textual description record of **SYMPTOM_TEXT** as input and the lists of symptoms extracted are saved in the **Claude_SYMPTOMS** variable as follows:<br>
 <img width="1000" alt="image" src="https://github.com/user-attachments/assets/309e14fd-d970-47aa-bd15-6a22cbe9b506" />
 
-   
+#### Comparison of List of Symptoms Extracted by GPT4 and Claude Sonnet 3.5:
+<div align = "center">
+<img width="1082" alt="image" src="https://github.com/user-attachments/assets/dca95b38-ad24-453e-964d-5edf20943bed" />
+</div>
+
+#### Top 10 Frequently Occurring Symptoms extracted by Chat GPT 4:
+<div align = "center">
+<img width="1200" alt="image" src="https://github.com/user-attachments/assets/0af021cf-8354-4fa0-adbf-fc4d2bb4598e" />
+</div>
+
+#### Top 10 Frequently Occurring Symptoms extracted by  Anthropic Claude 3.5 Sonnet Latest:
+<div align = "center">
+<img width="1200" alt="image" src="https://github.com/user-attachments/assets/f758e57e-ae7f-4cd3-ac6c-4aabe6cade8d" />
+</div>   
 
 
 
