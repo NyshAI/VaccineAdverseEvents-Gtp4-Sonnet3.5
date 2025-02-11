@@ -230,6 +230,10 @@ A function named group_similar_symptoms is defined as follows, to group similar 
 <div align = "center">
 <img width="800" alt="image" src="https://github.com/user-attachments/assets/7077700a-358e-4eea-8d44-5624ca883375" />
 </div> 
+<div align = "center">
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/ffae0910-018a-4da0-96c1-947e5f077d07" />
+</div> 
+
 
 
 
