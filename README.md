@@ -1,7 +1,7 @@
 # Analyzing Temporal and Associative Relationships of Vaccine Adverse Events for Hepatitis B vaccination
 
 ## Background and Goal:
-Analyzing adverse events in the vaccine is essential for ensuring vaccine safety. With large datasets like Vaccine Adverse Events Reporting Systems (VAERS) capturing a wide range of reported vaccine adverse events, it becomes important to examine their temporal patterns and associations. In this project, the primary objective is to identify and uncover critical temporal relationships and associations of these adverse events with advanced natural language processing techniques.
+Analyzing adverse events in the vaccine is essential for ensuring vaccine safety. With large datasets like Vaccine Adverse Events Reporting Systems (VAERS) capturing a wide range of reported vaccine adverse events, examining their temporal patterns and associations becomes important. In this project, the primary objective is to identify and uncover critical temporal relationships and associations of these adverse events with advanced natural language processing techniques.
 
 ### Essential Terminology:
 
@@ -273,7 +273,7 @@ $$
 #### **Kendall Tau Rank Correlation Coefficient Results and Analysis**
 ##### **Output Sample:**
 <div align = "center">  
-<img width="1200" alt="image" src="https://github.com/user-attachments/assets/310f1c42-27c2-4d90-b865-f482b966fbd3" />
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/310f1c42-27c2-4d90-b865-f482b966fbd3" />
 </div>   
 
 ##### **Kendall $\tau$ Five Point Summary:**
@@ -310,10 +310,66 @@ $$
 - The **outliers at the lower end** may indicate scenarios where **rankings diverged significantly**, possibly due to **ambiguous symptoms, model biases, or dataset inconsistencies**.
 
 
-       
+### Longest Common Subsequence (LCS) in Post-Hepatitis B Vaccination Symptom Sequences from GPT-4 & Claude 3.5:
+**Longest Common Subsequence (LCS)** is a classic problem in computer science used to find the longest sequence that appears in the same relative order within two given sequences. Unlike substrings, subsequences are not required to occupy consecutive positions within the original sequences.
 
-        
-       
+#### Definition:
+Given two sequences, $X$ and $Y$ of the length $n$, the Longest Common Subsequence is the longest sequence that can be derived from both $X$ and $Y$ by deleting some or none of their characters without rearranging the remaining characters.<br>
+
+**Example**:<br>
+For sequences $X$ = $”ABCBDAB”$ and $Y$ = $”BDCAB”$, the LCS is:<br>**"BCAB"** or **"BDAB"**, each of length **4**.
+
+#### Formula and Approach:
+Let two sequences be defined as follows:  
+$X = (x_1 x_2 \cdots x_m)$ and $Y = (y_1 y_2 \cdots y_n)$.  
+The prefixes of $X$ are $X_0, X_1, X_2, \dots, X_m$;  
+the prefixes of $Y$ are $Y_0, Y_1, Y_2, \dots, Y_n$.  
+
+Let $LCS(X_i, Y_j)$ represent the set of longest common subsequences of prefixes $X_i$ and $Y_j$.  
+This set of sequences is given by the following:
+
+$$
+LCS(X_i, Y_j) =
+\begin{cases} 
+\epsilon & \text{if } i = 0 \text{ or } j = 0 \\ 
+LCS(X_{i-1}, Y_{j-1}) \mathbin{\hat{}} x_i & \text{if } i, j > 0 \text{ and } x_i = y_j \\ 
+\max \{ LCS(X_i, Y_{j-1}), LCS(X_{i-1}, Y_j) \} & \text{if } i, j > 0 \text{ and } x_i \neq y_j 
+\end{cases}
+$$
+
+To find the **LCS** of $X_i$ and $Y_j$, compare $x_i$ and $y_j$:
+- If they are **equal**, then the sequence $LCS(X_{i-1}, Y_{j-1})$ is extended by that element, $x_i$.
+- If they are **not equal**, then the longest among the two sequences, $LCS(X_i, Y_{j-1})$ and $LCS(X_{i-1}, Y_j)$, is retained.
+- *(If they are the same length but not identical, then both are retained.)*
+
+The **base case**, when either $X_i$ or $Y_i$ is **empty**, is the **empty string**, $\epsilon$.
+
+#### **Output Sample:**
+<div align = "center">  
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/600228df-f52d-4eda-85bb-e54f99aece18" />
+</div>   
+
+##### **Definition: Longest Common Subsequence (LCS) Ratio**
+
+The **Longest Common Subsequence Ratio (LCS Ratio)** is a **normalized similarity measure** that quantifies the similarity between two sequences based on their **Longest Common Subsequence (LCS)**.
+
+It is defined as:
+
+$$
+\text{LCS Ratio} = \frac{|LCS(X, Y)|}{\max(|X|, |Y|)}
+$$
+
+where:
+- \( |LCS(X, Y)| \) is the length of the **Longest Common Subsequence** between sequences \(X\) and \(Y\).
+- \( |X| \) and \( |Y| \) are the lengths of the original sequences.
+- \( \max(|X|, |Y|) \) ensures the ratio is **normalized** between **0 and 1**.
+
+##### **Interpretation:**
+- **LCS Ratio = 1** → The sequences are **identical**.
+- **LCS Ratio = 0** → The sequences have **no common subsequence**.
+- **Higher LCS Ratio** → Greater similarity between the sequences.
+
+
 
 
     
