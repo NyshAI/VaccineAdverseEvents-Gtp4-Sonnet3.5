@@ -265,7 +265,7 @@ $$
 
 #### **Interpretation of Kendall’s Tau:**
 - $\tau = +1$: Perfect agreement between the rankings of the two variables (all pairs are concordant).
-- $\tau = -1$: Perfect disagreement between the rankings (all pairs are discordant).
+- $\tau = -1$: Perfect disagreement between the rankings (all discordant pairs).
 - $\tau = 0$: No association between the rankings of the two variables.
 
 ---
@@ -275,8 +275,11 @@ $$
 <div align = "center">  
 <img width="1200" alt="image" src="https://github.com/user-attachments/assets/310f1c42-27c2-4d90-b865-f482b966fbd3" />
 </div>   
-             
 
+##### **Five Point Summary:**
+<div align = "center">  
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/106c2fb1-5763-4a7a-bdb8-57f172e602cc" />
+</div>   
 
        
        
