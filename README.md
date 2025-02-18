@@ -276,13 +276,28 @@ $$
 <img width="1200" alt="image" src="https://github.com/user-attachments/assets/310f1c42-27c2-4d90-b865-f482b966fbd3" />
 </div>   
 
-##### **Five Point Summary:**
+##### **Kendall $\tau$ Five Point Summary:**
 <div align = "center">  
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/106c2fb1-5763-4a7a-bdb8-57f172e602cc" />
 </div>   
 
-       
-       
+##### **Kendall $\tau$ Box Plot:**
+<div align = "center">  
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/4d934791-7617-4bbc-b407-e0494c4d1129" />
+</div>
+
+#### Analysis of the Box Plot for Kendall Tau Coefficient
+
+##### Key Observations:
+* **Median (Q2)**: The thick orange line inside the box represents the median, which appears to be close to 0.9.
+* **Interquartile Range (IQR)**: The box spans approximately from **0.75** to **1.0**, *indicating that 50% of the data falls within this range*.
+
+##### Whiskers:
+* The **right whisker** extends slightly beyond **1.0**, suggesting a *high concentration of values near the upper range*.
+* The **left whisker** extends toward **0.5-0.6**, showing some *variability in lower values*.
+
+
+
 
        
 
