@@ -478,3 +478,8 @@ $$
 DTW(A, B) = D(n, m)
 $$
 
+
+#### **Output Sample:**
+<div align = "center">  
+<img width="1200" alt="image" src="https://github.com/user-attachments/assets/462605a7-77a0-41aa-b58f-3f9d6bd5afc2" />
+</div>  
