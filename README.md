@@ -369,12 +369,12 @@ where:
 - **LCS Ratio = 0** → The sequences have **no common subsequence**.
 - **Higher LCS Ratio** → Greater similarity between the sequences.
 
-##### LCS Ratio Five Point Summary:
+##### **LCS Ratio Five Point Summary:**
 <div align = "center">  
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/9ec8a518-ebd7-4acb-9fa1-6550a68e0d65"/>
 </div>  
 
-##### LCS Ratio Box Plot:
+##### **LCS Ratio Box Plot:**
 <div align = "center">  
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/538828f3-d938-463f-a9ae-ff244a3bcf3b" />
 </div>
@@ -413,7 +413,7 @@ where:
 ### **Dynamic Time Wrapping (DTW) in Post-Hepatitis B Vaccination Symptom Sequences from GPT-4 & Claude 3.5:**
 DTW measures the similarity between two sequences that may vary in time or speed. It finds an optimal alignment between the sequences by allowing for stretching and compressing of time (or order in this case). This metric is often used when the exact matching of order is not as important as the overall alignment of patterns between sequences.<br>
 
-#### Definition:
+#### **Definition:**
 Dynamic Time Warping finds an optimal alignment between two sequences by allowing non-linear mapping along the time dimension. In other words, it stretches or compresses
 sections of the time series to find the best match between them. The goal of DTW is to minimize the distance between the two sequences, even if they differ in speed or duration.
 
@@ -478,8 +478,49 @@ $$
 DTW(A, B) = D(n, m)
 $$
 
-
 #### **Output Sample:**
 <div align = "center">  
 <img width="1200" alt="image" src="https://github.com/user-attachments/assets/462605a7-77a0-41aa-b58f-3f9d6bd5afc2" />
+</div>
+
+#### **DTW Five Point Summary:**
+<div align = "center">  
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/3633e71a-4949-42de-816a-c255fa623655" />
 </div>  
+
+- **Minimum (0.0):** The lowest DTW distance observed in the dataset is **0**, indicating perfect alignment in some cases.
+
+- **1st Quartile (Q1 = 0.0):** 25% of the DTW distances are **0**, meaning a significant proportion of sequences have nearly perfect alignment.
+
+- **Median (Q2 = 0.0):** The **50th percentile (median) is also 0**, indicating that **at least half** of the dataset contains sequences that are **identical or very similar**.
+
+- **3rd Quartile (Q3 = 0.0):** 75% of the DTW distances are **0**, meaning most of the comparisons show little to no difference.
+
+- **Maximum (282.0):** The highest DTW distance recorded is **282**, showing that some sequences have **significant misalignment**.
+
+#### **DTW Five Box Plot:**
+<div align = "center">  
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/be947137-51bb-4246-9a26-7d4974f3adcb" />
+</div>
+
+#### **Box Plot Analysis:**
+- Tightly clustered box at 0: Since **Q1**, **Q2**, and **Q3** are all **0**, the **entire interquartile range (IQR) is compressed**, meaning the **majority of DTW values are 0.**
+
+- Presence of Outliers:
+  - The **dots extending to the right (above 0)** represent **outliers**, which indicate sequences with **high DTW distances**.
+  - These outliers extend **from low values (10-50) to very high values (200+)**, suggesting that a small subset of sequences has **poor alignment**.
+
+- Extreme Outliers:
+  - The **maximum value (282)** is far away from the rest of the distribution, indicating that a few sequences exhibit **significant deviations** in structure.
+
+#### **Interpretation & Insights:**
+
+- **Most sequences are highly similar** (as shown by the **median and quartiles being 0**).
+
+- **Some sequences show significant misalignment**, with **DTW distances reaching as high as 282**.
+
+- **Outliers suggest variability in the dataset**, possibly due to:
+  - **Differences in sequence length**.
+  - **Model inconsistencies**.
+
+ ## **Associative Relationship Analysis of Symptoms:**
