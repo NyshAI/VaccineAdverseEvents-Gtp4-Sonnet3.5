@@ -369,7 +369,43 @@ where:
 - **LCS Ratio = 0** → The sequences have **no common subsequence**.
 - **Higher LCS Ratio** → Greater similarity between the sequences.
 
+##### LCS Ratio Five Point Summary:
+<div align = "center">  
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/9ec8a518-ebd7-4acb-9fa1-6550a68e0d65"/>
+</div>  
 
+##### LCS Ratio Box Plot:
+<div align = "center">  
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/538828f3-d938-463f-a9ae-ff244a3bcf3b" />
+</div>
 
+##### **Interpretation of the Box Plot for LCS Ratio**  
 
-    
+###### **1. Distribution Characteristics**  
+- The **box plot represents the distribution of Longest Common Subsequence (LCS) Ratios** across different sequences.
+- The **x-axis** represents the **LCS Ratio**, ranging from **0 to 1**.
+
+###### **2. Key Observations**  
+- **Median (Q2)**:  
+  - The **orange line inside the box** represents the **median** (50th percentile), which is around **0.90**.
+  - This suggests that for **half of the cases, the LCS Ratio is at least 0.90**, indicating strong similarity in many cases.
+
+- **Interquartile Range (IQR)**:  
+  - The **box extends approximately from 0.81 to 1.0**, meaning **50% of the LCS Ratios fall within this range**.
+  - This shows that the majority of sequences exhibit a **high degree of similarity**.
+
+- **Whiskers**:  
+  - The **right whisker extends to 1.0**, suggesting that several cases achieve a **perfect LCS Ratio**.
+  - The **left whisker extends to around 0.5**, indicating some lower-similarity cases.
+
+- **Outliers**:  
+  - Several **outliers** are present below **0.5**, with extreme values even **below 0.0814**.
+  - These outliers indicate cases where the **LCS Ratio is significantly lower**, meaning **the sequences have minimal commonality**.
+
+##### **3. Interpretation & Insights**  
+- The **high median (0.90) and upper quartile near 1.0** suggest that in most cases, the sequences **share a significant portion of common elements**.
+- The **presence of outliers** below **0.5** suggests that **some sequences have weak similarity**, possibly due to:
+  - Variability in extracted sequences.
+  - Model inconsistencies (GPT-4 vs. Claude 3.5).
+  - Noise or differences in text preprocessing.
+- The **right-skewed distribution** indicates **high similarity in most cases** but with some cases where similarity is low.
