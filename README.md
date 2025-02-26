@@ -409,3 +409,10 @@ where:
   - Model inconsistencies (GPT-4 vs. Claude 3.5).
   - Noise or differences in text preprocessing.
 - The **right-skewed distribution** indicates **high similarity in most cases** but with some cases where similarity is low.
+
+### **Dynamic Time Wrapping (DTW) in Post-Hepatitis B Vaccination Symptom Sequences from GPT-4 & Claude 3.5:**
+DTW measures the similarity between two sequences that may vary in time or speed. It finds an optimal alignment between the sequences by allowing for stretching and compressing of time (or order in this case). This metric is often used when the exact matching of order is not as important as the overall alignment of patterns between sequences.<br>
+
+#### Definition:
+Dynamic Time Warping finds an optimal alignment between two sequences by allowing non-linear mapping along the time dimension. In other words, it stretches or compresses
+sections of the time series to find the best match between them. The goal of DTW is to minimize the distance between the two sequences, even if they differ in speed or duration.
