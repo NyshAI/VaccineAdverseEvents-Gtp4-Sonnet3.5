@@ -416,3 +416,65 @@ DTW measures the similarity between two sequences that may vary in time or speed
 #### Definition:
 Dynamic Time Warping finds an optimal alignment between two sequences by allowing non-linear mapping along the time dimension. In other words, it stretches or compresses
 sections of the time series to find the best match between them. The goal of DTW is to minimize the distance between the two sequences, even if they differ in speed or duration.
+
+#### **Mathematical Formulation**
+
+Given two sequences $A = \lbrace a_1, a_2, \dots, a_n \rbrace$ and $B = \lbrace b_1, b_2, \dots, b_m \rbrace$, where $a_i$ and $b_j$ are elements of the sequences $A$ and $B$ respectively, DTW computes the minimum cumulative distance between them.
+
+##### **1. Cost Matrix**
+Define a cost matrix $C$ of size $n \times m$,<br>
+where $C(i, j)$ represents the cost (or distance) of aligning $a_i$ with $b_j$.<br>
+The cost is typically calculated using a distance metric, such as the Euclidean distance:
+
+$$
+C(i, j) = \text{distance}(a_i, b_j) = |a_i - b_j|
+$$
+
+##### **2. Accumulated Cost Matrix**
+Construct an accumulated cost matrix $D$ where each element $D(i, j)$ represents the minimum cumulative cost to align the first $i$ elements of $A$ with the first $j$ elements of $B$:
+
+$$
+D(i, j) = C(i, j) + \min 
+\begin{cases} 
+D(i-1, j) \\ 
+D(i, j-1) \\ 
+D(i-1, j-1) 
+\end{cases}
+$$
+
+- Here,
+  - $D(i-1, j)$ corresponds to an **insertion**.
+  - $D(i, j-1)$ corresponds to a **deletion**.
+  - $D(i-1, j-1)$ corresponds to a **match (or diagonal move).**
+
+##### **3. Boundary Conditions**
+The boundary conditions are initialized as follows:
+
+$$
+D(1,1) = C(1,1)
+$$
+
+$$
+D(i,1) = D(i-1,1) + C(i,1) \quad \text{for } i = 2, \dots, n
+$$
+
+$$
+D(1,j) = D(1,j-1) + C(1,j) \quad \text{for } j = 2, \dots, m
+$$
+
+##### **4. Optimal Warping Path**
+The optimal warping path \( W \) is defined as:
+
+$$
+W = \{(i_1, j_1), (i_2, j_2), \dots, (i_L, j_L)\}
+$$
+
+where \( W \) is a sequence of matrix indices that minimizes the cumulative distance.  
+This path is found by **backtracking** from \( D(n, m) \) to \( D(1,1) \) by following the minimum cost direction at each step.
+
+The overall **DTW distance** is given by:
+
+$$
+DTW(A, B) = D(n, m)
+$$
+
