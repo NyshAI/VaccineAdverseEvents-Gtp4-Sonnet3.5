@@ -560,3 +560,9 @@ The confidence metric identifies the probability of symptoms or sets of symptoms
 
 </div>
 
+**Top 15 antecedence(A symptoms) and consequents(B symptoms) occuring together sorted by confidence in descending:**
+<div align = "center"> 
+<img width="1200" alt="image" src="https://github.com/user-attachments/assets/35b66dd0-5b99-4c1c-a6b9-cddfd40eb5dd" />
+</div>
+<br>
+From the output obtained above, we notice that, the confience amongst them is 1.0, so there is a 100% change that the antecedence symptoms will certainly lead to consequents. That is say for instance that if the set of symptoms "muscle weakness, nauseated, nv diarrhea" then it will be certainly be followed by the symptoms "vomit, severe dizziness".
