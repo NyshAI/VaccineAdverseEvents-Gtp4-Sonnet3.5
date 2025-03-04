@@ -530,13 +530,61 @@ The association analysis is performed using **Apriori Algorithm**.
 ### **Apriori Algorithm**:
 The Apriori algorithm is an _association rule mining algorithm_ used primarily to identify frequent itemsets in a large dataset and to derive association rules. It is commonly used in _market basket analysis_ to find product combinations that frequently appear together in transactions. The algorithm is based on the Apriori principle, which states that if an itemset is frequent, all of its subsets must also be frequent.<br>
 
+#### Apriori Algorithm Steps:
+
+##### (a) **Support**: Generate Frequent Symptom Sets:
+- Identify all symptom sets in the dataset that have support above a minimum threshold (called frequent symptom sets).
+- Use the **Apriori property** to prune symptom sets. If a subset of a symptom set is not frequent, then the symptom set itself cannot be frequent.
+
+##### (b) **Generate Association Rules**:
+From the frequent symptom sets, generate association rules that have confidence above a minimum threshold.
+
+##### **Association Rule Formula**:
+For a rule $\( A \to B \)$:
+
+---
+
+##### **Support**:
+Measures the occurrence of transactions \( A \) and \( B \) together:
+
+$$
+Support(A \to B) = \frac{Transactions\ containing\ (A \cup B)}{Total\ transactions}
+$$
+
+---
+
+##### **Confidence**:
+Measures how often \( B \) occurs in transactions that contain \( A \):
+
+$$
+Confidence(A \to B) = \frac{Transactions\ containing\ (A \cup B)}{Transactions\ containing\ A}
+$$
+
+---
+
+##### **Lift**:
+Compares the confidence of a rule with the expected confidence if \( A \) and \( B \) were independent:
+
+$$
+Lift(A \to B) = \frac{Support(A \cup B)}{Support(A) \times Support(B)}
+$$
+
+In practice, the Apriori algorithm iteratively increases the size of symptom sets (startingfrom single symptoms). It applies the Apriori property to keep only frequent symptom sets, reducing computation time and complexity.
 #### **Key Metrics of Apriori Algorithm**:
 ##### **Support:**
 This metric measures how frequently a symptom appears in the dataset relative to the total number of transactions. A higher support indicates a more significant presence of the symptom in the dataset. Support tells us how often a particular symptom or combination of symptoms appears in all the transactions.<br>
 Measure of symptoms A and B occurring together is given by:<br>
-<p align="center">  
-   $Support(A \rightarrow B) = \frac{Transactions \ containing \ (A \cup B)}{Total \ transactions}$
-</p>
+<div align="center">
+
+  $$
+  S(I_A) = \frac{Occ(I_A)}{TotalTransactions}
+  $$
+  
+  where \( S($I_A$) \) represents the **support of item A**,  
+  \( $I_A$ \) is the **item A**, and  
+  \( Occ($I_A$) \) is the **number of occurrences** of item \( A \).
+
+</div>
 
 **Top 15 antecedence(A symptoms) and consequents(B symptoms) occuring together sorted by support in descending:**
 <div align = "center"> 
@@ -592,5 +640,7 @@ Lift is the factor with which the likelihood of symptom or list of symptoms A le
 </div>
 <br>
 Interpretation:<br>
-From the output obtained above, we notice that, the lift for antecedence(A symptoms) and consequents(B symptoms) pairs are significantly **high**. For instance, consider the pair of sets of symptoms "severe dizziness, nv diarrhea" and "vomit, muscle weakness, nauseated" which have the highest lift of 19.285714, indicate that the probility of these sets of symptoms occuring together is 19.29 times more than them occuring individually.
+From the output obtained above, we notice that, the lift for antecedence(A symptoms) and consequents(B symptoms) pairs are significantly high.<br> For instance, consider the pair of sets of symptoms "severe dizziness, nv diarrhea" and "vomit, muscle weakness, nauseated" which have the highest lift of 19.285714, indicate that the probility of these sets of symptoms occuring together is 19.29 times more than them occuring individually.
+
+
 
