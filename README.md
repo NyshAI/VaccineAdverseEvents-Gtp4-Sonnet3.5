@@ -643,4 +643,41 @@ Interpretation:<br>
 From the output obtained above, we notice that, the lift for antecedence(A symptoms) and consequents(B symptoms) pairs are significantly high.<br> For instance, consider the pair of sets of symptoms "severe dizziness, nv diarrhea" and "vomit, muscle weakness, nauseated" which have the highest lift of 19.285714, indicate that the probility of these sets of symptoms occuring together is 19.29 times more than them occuring individually.
 
 
+#### Exploring the relationships amongst Support, Confidence and Lift:
 
+<div align = "center"> 
+<img width="1000" alt="image" src="https://github.com/user-attachments/assets/7a4b7725-4169-4f18-b7d9-b4ff3527f139" />
+</div>
+
+##### **Interpretation of the Scatter Plot**
+
+The scatter plot visualizes the association rules generated using the **Apriori algorithm** on symptoms **post Hepatitis B vaccination** based on three key measures:  
+- **Support (X-axis)**: Frequency of the symptom combinations occuring together.
+- **Confidence (Y-axis)**: How likely a symptom (consequent) appears given another symptom (antecedent).  
+- **Lift (Color Intensity)**: How much more likely symptoms co-occur together compared to random chance.
+
+###### **Key Observations:**
+
+1. Most rules have low support (< 0.1)
+  - This suggests that most symptom combinations are relatively rare in the dataset.  
+  - A few high-support rules (~0.18) indicate some **common symptom associations** after Hepatitis B vaccination.
+
+2. Higher Confidence for Low-Support Rules
+  - Many rules with low support have **high confidence (~1.0)**, meaning that when these symptoms occur, they are highly predictive of each other.
+  - However, high confidence **alone does not mean strong association** (e.g., a rare symptom may always co-occur with another, inflating confidence).
+
+3. Lift Highlights Strong Associations
+  - The **color gradient (Lift value)** shows stronger associations:  
+    - **Darker (low lift ~2.5)**: Weak correlations (symptoms occur at expected random rates).  
+    - **Brighter (high lift ~18.0)**: Strongly associated symptoms that occur **far more frequently** together than expected.
+  - The **high-lift rules (yellow-green dots)** often appear at low support, suggesting **rare but highly dependent symptoms**.
+
+###### Implications for Hepatitis B Vaccination Symptoms
+  - The high **Lift** (green/yellow points) suggests **some symptoms are significantly co-occurring**, which might indicate **side effects clusters** that require medical attention.
+  - **Rules with high confidence & low support** could indicate **rare but strong symptom dependencies**.
+  - **High-support & high-lift** rules suggest **common symptom pairs** that are much more frequent than chance, which could be useful for **clinical assessments**.
+
+###### **Conclusion**
+  - This analysis helps identify **strong symptom associations** that may need further investigation.
+  - High **lift rules** could be **clinically relevant** for recognizing **frequent symptom clusters post-vaccination**.
+  - **Low-support, high-lift** rules might indicate **rare but significant side effects** that warrant additional research.
