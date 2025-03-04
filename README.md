@@ -543,6 +543,7 @@ Measure of symptoms A and B occurring together is given by:<br>
 <img width="1200" alt="image" src="https://github.com/user-attachments/assets/dd79b27d-202a-417f-a140-defa455ee121" />
 </div>
 <br>
+Interpretation:<br>
 From the output obtained below we find that individual syptoms such as "nauseated", "lightheadedness", "chilling joint pains" occur most frequently and symptom sequences such as "chilling joint pains, coughing", "low grade, chilling joint pains" and "low grade, coughing, chilling joint pains, upper respiratory congestion, lightheadedness" occur most frequently.
 <div align = "center"> 
 <img width="800" alt="image" src="https://github.com/user-attachments/assets/cebdf079-7b09-4929-b3d8-579ac048c3b2" />
@@ -556,7 +557,9 @@ The confidence metric identifies the probability of symptoms or sets of symptoms
    C(A, B) = \frac{Occ(A \cap B)}{Occ(A)}
    $$
 
-   where \( A \) is the antecedent, \( B \) is the consequent, and \( C(A,B) \) is the confidence that \( A \) leads to \( B \).
+   where \( C(A,B) \) is the **confidence** that \( A \) leads to \( B \),<br>
+   \( B \) is the **consequent**, and <br>
+   \( A \) is the **antecedent**.
 
 </div>
 
@@ -565,4 +568,29 @@ The confidence metric identifies the probability of symptoms or sets of symptoms
 <img width="1200" alt="image" src="https://github.com/user-attachments/assets/35b66dd0-5b99-4c1c-a6b9-cddfd40eb5dd" />
 </div>
 <br>
-From the output obtained above, we notice that, the confience amongst them is 1.0, so there is a 100% change that the antecedence symptoms will certainly lead to consequents. That is say for instance that if the set of symptoms "muscle weakness, nauseated, nv diarrhea" then it will be certainly be followed by the symptoms "vomit, severe dizziness".
+Interpretation:<br>
+From the output obtained above, we notice that, the confience amongst them is 1.0, so there is a 100% change that the antecedence symptoms will certainly lead to consequents. That is, say for instance, if the set of symptoms "muscle weakness, nauseated, nv diarrhea" occured then it is certain that the symptoms "vomit, severe dizziness" has also occured.
+
+#### **Lift:**
+Lift is the factor with which the likelihood of symptom or list of symptoms A leading to symptom or list of symptoms B is higher than the likelihood of A. This metric quantifies the strength of association between A and B. It can help indicate whether there is a real relationship between the symptoms or lists of symptoms in a recordt or are they being grouped together by coincidence.
+<br>
+<div align="center">
+
+   $$
+   L(A, B) = \frac{C(A, B)}{S(B)}
+   $$
+
+   where \( L(A,B) \) is the **lift** for item \( A \) leading to item \( B \),  
+   \( C(A,B) \) is the **confidence** that item \( A \) leads to item \( B \),  
+   \( S(B) \) is the **support** for item \( B \).
+
+</div>
+
+**Top 15 antecedence(A symptoms) and consequents(B symptoms) occuring together sorted by confidence in descending:**
+<div align = "center"> 
+<img width="1200" alt="image" src="https://github.com/user-attachments/assets/db414e09-0cb1-4f86-8bab-daceed94d7d5" />
+</div>
+<br>
+Interpretation:<br>
+From the output obtained above, we notice that, the lift for antecedence(A symptoms) and consequents(B symptoms) pairs are significantly **high**. For instance, consider the pair of sets of symptoms "severe dizziness, nv diarrhea" and "vomit, muscle weakness, nauseated" which have the highest lift of 19.285714, indicate that the probility of these sets of symptoms occuring together is 19.29 times more than them occuring individually.
+
