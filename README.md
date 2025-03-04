@@ -538,3 +538,14 @@ Measure of symptoms A and B occurring together is given by:<br>
    $Support(A \rightarrow B) = \frac{Transactions \ containing \ (A \cup B)}{Total \ transactions}$
 </p>
 
+**Top 15 antecedence(A symptoms) and consequents(B symptoms) occuring together:**
+<div align = "center"> 
+<img width="1200" alt="image" src="https://github.com/user-attachments/assets/0ddbdb9e-0fde-49ee-9f0b-8976d48ee7f0" />
+</div>
+<br>
+From the output obtained below we find that individual syptoms such as "nauseated", "lightheadedness", "chilling joint pains" occur most frequently and symptom sequences such as "chilling joint pains, coughing", "low grade, chilling joint pains" and "low grade, coughing, chilling joint pains, upper respiratory congestion, lightheadedness" occur most frequently.
+<div align = "center"> 
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/713069ca-dbdf-47da-ade1-ad4e6a22e3f6" />
+</div>
+
+####**Confidence:**
