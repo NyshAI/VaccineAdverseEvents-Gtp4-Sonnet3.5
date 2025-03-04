@@ -9,7 +9,7 @@ Analyzing adverse events in the vaccine is essential for ensuring vaccine safety
 Hepatitis B is a liver infection caused by the hepatitis B virus (HBV). It can range from a mild, short-term illness to a chronic, long-term condition. The virus primarily spreads through contact with infected body fluids, which may occur through blood transfusions, sharing needles, sexual contact, or from mother to child during childbirth.
 
 #### Temporal Relationships
-This involves studying when adverse events occur concerning when a vaccine was administered. By analyzing the timing, researchers can assess whether certain adverse events are more likely to happen immediately after vaccination, within a few days, weeks, or longer. Understanding this timing helps determine if there’s a potential link between the vaccine and the event or if it’s coincidental.
+This involves studying when adverse events occur, concerning when a vaccine was administered. By analyzing the timing, researchers can assess whether certain adverse events are more likely to happen immediately after vaccination, within a few days, weeks, or longer. Understanding this timing helps determine if there’s a potential link between the vaccine and the event or if it’s coincidental.
 
 #### Associative Relationships:
 This part examines possible correlations or associations between the vaccine and specific adverse events. By identifying patterns in data, researchers can see if certain side effects appear more frequently with particular vaccines, age groups, health conditions, or demographic factors.
@@ -186,7 +186,7 @@ The above steps are implemented as the try block.
 The process of extracting symptoms from the crude textual description of SYMPTOMS_TEXT using Sonet3.5 is similar to the process we used with Sonnet 3.5 models.<br> The Anthropic API key is stored in the working environment as follows:<br>
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/4014f7bb-d992-4b7d-80ae-fce35b945b8e" /><br>
 I have written a function called **extract_symptoms_claude** which takes the textual descriptions as input available in SYMPTOMS_TEXT and performs the following steps.
-1. If the input is not a text or empty an empty string [] is returned.
+1. If the input is not a text or empty, an empty string [] is returned.
 2. Then we implement a try-catch block. In the try block,
     - We use the truncate_text to make sure that the text is not too long.
     - We send the API request to  Claude Messages as follows:
@@ -524,3 +524,17 @@ $$
   - **Model inconsistencies**.
 
  ## **Associative Relationship Analysis of Symptoms:**
+We perform an association analysis based on the input, which is the list of symptoms in the available 10,000 records. This allows us to analyze the patterns or relationships of different symptoms that frequently occur together or share similar characteristics. The output will be a list of rules identified based on the data. The symptoms in each rule indicate that the probability of their co-occurrence is high.<br>
+The association analysis is performed using **Apriori Algorithm**.
+
+### **Apriori Algorithm**:
+The Apriori algorithm is an _association rule mining algorithm_ used primarily to identify frequent itemsets in a large dataset and to derive association rules. It is commonly used in _market basket analysis_ to find product combinations that frequently appear together in transactions. The algorithm is based on the Apriori principle, which states that if an itemset is frequent, all of its subsets must also be frequent.<br>
+
+#### **Key Metrics of Apriori Algorithm**:
+##### **Support:**
+This metric measures how frequently a symptom appears in the dataset relative to the total number of transactions. A higher support indicates a more significant presence of the symptom in the dataset. Support tells us how often a particular symptom or combination of symptoms appears in all the transactions.<br>
+Measure of symptoms A and B occurring together is given by:<br>
+<p align="center">  
+   $Support(A \rightarrow B) = \frac{Transactions \ containing \ (A \cup B)}{Total \ transactions}$
+</p>
+
