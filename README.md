@@ -538,14 +538,25 @@ Measure of symptoms A and B occurring together is given by:<br>
    $Support(A \rightarrow B) = \frac{Transactions \ containing \ (A \cup B)}{Total \ transactions}$
 </p>
 
-**Top 15 antecedence(A symptoms) and consequents(B symptoms) occuring together:**
+**Top 15 antecedence(A symptoms) and consequents(B symptoms) occuring together sorted by support in descending:**
 <div align = "center"> 
-<img width="1200" alt="image" src="https://github.com/user-attachments/assets/0ddbdb9e-0fde-49ee-9f0b-8976d48ee7f0" />
+<img width="1200" alt="image" src="https://github.com/user-attachments/assets/dd79b27d-202a-417f-a140-defa455ee121" />
 </div>
 <br>
 From the output obtained below we find that individual syptoms such as "nauseated", "lightheadedness", "chilling joint pains" occur most frequently and symptom sequences such as "chilling joint pains, coughing", "low grade, chilling joint pains" and "low grade, coughing, chilling joint pains, upper respiratory congestion, lightheadedness" occur most frequently.
 <div align = "center"> 
-<img width="600" alt="image" src="https://github.com/user-attachments/assets/713069ca-dbdf-47da-ade1-ad4e6a22e3f6" />
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/cebdf079-7b09-4929-b3d8-579ac048c3b2" />
 </div>
 
-####**Confidence:**
+#### **Confidence:**
+The confidence metric identifies the probability of symptoms or sets of symptoms occurring in the itemsets together. For example, if there are two symtoms in a record, the existence of one symptom is assumed to lead to the other. The first item or itemset is the **antecedent**, and the second is the **consequent**. *The confidence is thus defined as the ratio of the number of transactions having both the antecedent and the consequent, to the number of transactions only having the antecedent*. This scenario is represented as:
+<div align="center">
+
+   $$
+   C(A, B) = \frac{Occ(A \cap B)}{Occ(A)}
+   $$
+
+   where \( A \) is the antecedent, \( B \) is the consequent, and \( C(A,B) \) is the confidence that \( A \) leads to \( B \).
+
+</div>
+
