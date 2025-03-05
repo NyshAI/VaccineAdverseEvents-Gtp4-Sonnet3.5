@@ -681,3 +681,12 @@ The scatter plot visualizes the association rules generated using the **Apriori 
   - This analysis helps identify **strong symptom associations** that may need further investigation.
   - High **lift rules** could be **clinically relevant** for recognizing **frequent symptom clusters post-vaccination**.
   - **Low-support, high-lift** rules might indicate **rare but significant side effects** that warrant additional research.
+
+<br>
+
+## **Association Rules Network Graph for Post Hepatitis B Vaccination Symptoms**:
+The **Association Rules Network Graph** visualizes the relationships between symptoms experienced after the **Hepatitis B vaccination**, based on association rule mining. Each **node** represents a symptom or a group of symptoms, and the **edges (arrows)** represent association rules between them.<br>
+<details>
+  <summary>🔍 Click to Expand Image</summary>
+  <img src="path/to/image.png" alt="Association Rules Network Graph" width="100%">
+</details>
