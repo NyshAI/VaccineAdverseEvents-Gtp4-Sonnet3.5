@@ -686,7 +686,13 @@ The scatter plot visualizes the association rules generated using the **Apriori 
 
 ## **Association Rules Network Graph for Post Hepatitis B Vaccination Symptoms**:
 The **Association Rules Network Graph** visualizes the relationships between symptoms experienced after the **Hepatitis B vaccination**, based on association rule mining. Each **node** represents a symptom or a group of symptoms, and the **edges (arrows)** represent association rules between them.<br>
-<details>
-  <summary>🔍 Click to Expand Image</summary>
-  <img src="path/to/image.png" alt="Association Rules Network Graph" width="100%">
-</details>
+
+# **Association Rules Network Graph for Post Hepatitis B Vaccination Symptoms**
+The **Association Rules Network Graph** visualizes the relationships between symptoms experienced after the **Hepatitis B vaccination**, based on association rule mining. Each **node** represents a symptom or a group of symptoms, and the **edges (arrows)** represent association rules between them.
+
+# **Association Rules Network Graph for Post Hepatitis B Vaccination Symptoms**
+
+The **Association Rules Network Graph** visualizes the relationships between symptoms experienced after the **Hepatitis B vaccination**, based on association rule mining. Each **node** represents a symptom or a group of symptoms, and the **edges (arrows)** represent association rules between them.
+
+## 🔍 **Click the Image to View in Full Size**
+[![Association Rules Network Graph](https://raw.githubusercontent.com/your-username/your-repo/main/path/to/image.png)](https://raw.githubusercontent.com/your-username/your-repo/main/path/to/image.png)
