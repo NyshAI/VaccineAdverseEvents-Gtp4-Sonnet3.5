@@ -684,20 +684,54 @@ The scatter plot visualizes the association rules generated using the **Apriori 
 
 <br>
 
-## **Association Rules Network Graph for Post Hepatitis B Vaccination Symptoms**:
-The **Association Rules Network Graph** visualizes the relationships between symptoms experienced after the **Hepatitis B vaccination**, based on association rule mining. Each **node** represents a symptom or a group of symptoms, and the **edges (arrows)** represent association rules between them.<br>
-
-# **Association Rules Network Graph for Post Hepatitis B Vaccination Symptoms**
-The **Association Rules Network Graph** visualizes the relationships between symptoms experienced after the **Hepatitis B vaccination**, based on association rule mining. Each **node** represents a symptom or a group of symptoms, and the **edges (arrows)** represent association rules between them.
-
-# **Association Rules Network Graph for Post Hepatitis B Vaccination Symptoms**
+## **Association Rules Network Graph for Post Hepatitis B Vaccination Symptoms**
 
 The **Association Rules Network Graph** visualizes the relationships between symptoms experienced after the **Hepatitis B vaccination**, based on association rule mining. Each **node** represents a symptom or a group of symptoms, and the **edges (arrows)** represent association rules between them.
 
-## 🔍 **Click the Image to View in Full Size**
-# **Association Rules Network Graph for Post Hepatitis B Vaccination Symptoms**
-
-The **Association Rules Network Graph** visualizes the relationships between symptoms experienced after the **Hepatitis B vaccination**, based on association rule mining. Each **node** represents a symptom or a group of symptoms, and the **edges (arrows)** represent association rules between them.
-
-## 🔍 **Click the Image to View in Full Size**
+**Click the Image to View in Full Size**
 [![Association Rules Network Graph](https://github.com/NyshAI/VaccineAdverseEvents-Gtp4-Sonnet3.5/blob/main/Symptom_AssociationGraph.png)](https://github.com/NyshAI/VaccineAdverseEvents-Gtp4-Sonnet3.5/blob/main/Symptom_AssociationGraph.png)
+
+### **Interpretation of the Association Rules Network Graph for Post Hepatitis B Vaccination Symptoms**
+
+The **Association Rules Network Graph** visually represents **symptom relationships** observed after **Hepatitis B vaccination** using association rule mining.  
+- Each **node** represents a **symptom or a set of symptoms**.
+- Each **edge (arrow)** represents **an association rule**, showing a **dependency between symptoms**.
+- **Edge labels (red numbers)** indicate **confidence values**, measuring how often one symptom occurs given another.
+
+
+#### **Key Observations:**
+
+##### **1. Highly Connected Symptoms Indicate Strong Associations**
+  - Some symptoms appear in **large clusters** with multiple connections, indicating **frequent co-occurrence**.
+  - **Commonly associated symptom groups**:
+    - **Severe dizziness, nausea, muscle weakness, and vomiting** frequently appear together.
+    - **Lightheadedness, upper respiratory congestion, and coughing** are also strongly connected.
+
+##### **2. Edge Strength and Confidence Values**
+  - **Stronger edges (arrows with confidence ~1.0)** suggest **high certainty** that one symptom leads to another.
+  - **Lower-confidence edges (0.2 - 0.6)** suggest **weaker relationships**, possibly indicating occasional symptom co-occurrence.
+
+##### **3. Isolated or Weakly Connected Symptoms**
+- Some symptoms appear **on the outer edges with fewer connections**, indicating **they are less frequently associated**.
+- **Examples**:
+  - **Cold chills and chronic fatigue** have fewer associations, suggesting they may occur independently.
+
+##### **4. Strongly Associated Symptom Clusters**
+  - Clusters with **multiple connections** suggest **common post-vaccination symptom groups**.
+  - **Example:**  
+    - **(Vomiting, severe dizziness, nausea, and muscle weakness)** forms a highly interconnected network.
+    - **(Upper respiratory congestion, coughing, lightheadedness)** forms another symptom pattern.
+
+
+#### **Implications for Hepatitis B Vaccination Symptoms**
+  - **Frequent symptom co-occurrence** may indicate **predictable post-vaccination reactions**.
+  - **Highly confident rules (confidence ~1.0)** suggest **strong dependencies**, useful for **medical assessments**.
+  - **Low-confidence, high-lift rules** might suggest **rare but significant symptom combinations**.
+
+#### **Conclusion**
+  - This network **effectively visualizes symptom relationships**, highlighting **frequent clusters and strong associations**.
+  - **Most interconnected symptoms** likely represent **common vaccine side effects**.
+  - **Healthcare professionals** can use this to **better understand symptom dependencies and anticipate potential side effects**.
+
+
+
